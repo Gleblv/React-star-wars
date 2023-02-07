@@ -1,0 +1,26 @@
+.people__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.people__item {
+    width: 190px;
+    margin: var(--spacing-medium);
+    border-radius: var(--border-radius-small);
+    background-color: var(--color-white);
+    cursor: pointer;
+}
+.item__people-link {
+    color: var(--color-black);
+    text-align: center;
+}
+.item-people__image img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
+}
+.item-people__name {
+    padding: 15px 0;
+}

@@ -1,3 +1,5 @@
+import PeoplePage from '../PeoplePage/PeoplePage';
+
 import { getApiResourse } from '../../utils/network';
 
 import './App.css';
@@ -5,6 +7,7 @@ import './App.css';
 const App = () => {
   return (
     <>
+    <PeoplePage/>
     </>
   )
 }
