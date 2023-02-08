@@ -1,4 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 import PeopleList from '../../components/PeoplePage/PeopleList/PeopleList';
 import withErrorApi from '../../hoc-helpers/withErrorApi';
@@ -44,6 +46,10 @@ const PeoplePage = ({setErrorApi}) => {
         {peopl && <PeopleList peopl={peopl}/>}
         </>
     )
+}
+
+PeoplePage.propTypes = {
+    setErrorApi: PropTypes.func
 }
 
 export default withErrorApi(PeoplePage);

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 
 import './PeopleList.css';
@@ -21,6 +23,10 @@ const PeopleList = ({peopl}) => {
             })}
         </ul>
     )
+}
+
+PeopleList.propTypes = {
+    peopl: PropTypes.array
 }
 
 export default PeopleList;
