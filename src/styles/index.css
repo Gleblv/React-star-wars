@@ -3,13 +3,28 @@
     --color-white: #fff;
     --color-black: #000;
     --color-yellow: #ffff00;
+    --color-blue: #6a83fb;
+    --color-vieolet: #ae70c2;
 
     --spacing-medium: 20px;
+    --spacing-large: 30px;
 
     --font-size-header: 26px;
+    --font-size-main: 16px;
+    --font-bold: 600;
+
+    --text-shadow-yellow: 
+        0 0 2px var(--color-yellow),
+        0 0 40px var(--color-blue);
 
     --border-radius-small: 3px;
+
+    --transition: color 4ms;
+
+    --theme-default-header: #cccc46;
 }
+
+/* -------------------------------------------------------------- */
 
 *,
 *::after,
@@ -48,9 +63,29 @@ html,
 body {
     height: 100%;
     line-height: 1;
-    font-size: 14px;
+    font-size: var(--font-size-main);
     font-weight: 500px;
     color: #252B42;
     font-family: sans-serif;
     background: var(--color-dark-gray);
+    background-image: url('../images/main/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+
+}
+
+img {
+    display: block;
+}
+
+
+/* ----------------------------------------------------------- */
+
+.title__text {
+    line-height: 1.7;
+    font-size: var(--font-size-header);
+    text-shadow: 0 0 2px (--color-black);
+    color: var(--theme-default-header);
+    transition: color var(--transition-speed);
 }

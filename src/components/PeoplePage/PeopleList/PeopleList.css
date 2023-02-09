@@ -1,13 +1,16 @@
 .people__list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 0 -15px;
+    margin-bottom: -20px;
+    /* Возиожно придётся убрать */
+    padding: 10px; 
 }
 .people__item {
-    width: 190px;
-    margin: var(--spacing-medium);
+    flex: 0 1 20%;
+    padding: 0 15px;
+    padding-bottom: 20px;
     border-radius: var(--border-radius-small);
-    background-color: var(--color-white);
     cursor: pointer;
 }
 .item__people-link {
@@ -23,4 +26,29 @@
 }
 .item-people__name {
     padding: 15px 0;
+    background-color: var(--color-white);
+}
+
+@media (max-width: 1050px) {
+    .people__item {
+        flex: 0 1 25%;
+    }
+}
+
+@media (max-width: 876px) {
+    .people__item {
+        flex: 0 1 33.333%;
+    }
+}
+
+@media (max-width: 660px) { 
+    .people__item {
+        flex: 0 1 50%;
+    }
+}
+
+@media (max-width: 380px) {
+    .people__item {
+        flex: 0 1 100%;
+    }
 }
