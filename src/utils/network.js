@@ -1,3 +1,14 @@
+
+/**
+ * Изменяет utl с HTTP на HTTPS
+ * @param {String} url - для изменения
+ * @returns {String} - url с HTTPS
+ */
+export const changeHTTP = url => {
+    const result = url ? url.replace('http://', 'https://') : url;
+    return result;
+}
+
 export const getApiResourse = async (url) => {
     try {
         const res = await fetch(url);
