@@ -1,6 +1,16 @@
+.navigation-buttons {
+    text-align: center;
+    padding: 15px 0;
+}
+
 .next-nav__btn,
 .prev-nav__btn {
     padding: 10px 20px;
     font-size: 18px;
-    margin: 5px;
+    cursor: pointer;
+}
+
+.nav-link:not(:last-child) {
+    margin: 0 15px 0 0;
+    cursor: pointer;
 }

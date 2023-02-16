@@ -4,13 +4,17 @@ import { Link } from 'react-router-dom';
 import './PeopleNavigation.css';
 
 const PeopleNavigation = ({getResourse, prevPage, nextPage, counterPage}) => {
+    const onClickNext = () => getResourse(nextPage);
+
+    const onClickPrev = () => getResourse(prevPage);
+
     return (
         <div className='navigation-buttons'>
-            <Link to={`/people/?page=${counterPage - 1}`}>
-            <button className="prev-nav__btn">Previous</button>
+            <Link className='nav-link' to={`/people/?page=${counterPage - 1}`}>
+                <button onClick={onClickPrev} disabled={!prevPage} className="prev-nav__btn">Previous</button>
             </Link>
-            <Link to={`/people/?page=${counterPage + 1}`}>
-            <button className="next-nav__btn">Next</button>
+            <Link className='nav-link' to={`/people/?page=${counterPage + 1}`}>
+                <button onClick={onClickNext} disabled={!nextPage} className="next-nav__btn">Next</button>
             </Link>
         </div>
     )
