@@ -12,6 +12,7 @@
     padding-bottom: 20px;
     border-radius: var(--border-radius-small);
     cursor: pointer;
+    min-width: 200px;
 }
 .item__people-link {
     color: var(--color-black);

@@ -1,0 +1,40 @@
+.nav__btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    min-width: 100px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-family: sans-serif;
+    background: none;
+    outline: none;
+    transition: .4s;
+}
+
+.nav__btn:disabled,
+.nav__btn:disabled:hover {
+    color: #9c9c9c;
+    border-color: #9c9c9c;
+    background: none;
+    cursor: auto;
+}
+
+.dark-nav__btn {
+    border: 1px solid #fff;
+    color: #fff;
+
+}
+.dark-nav__btn:hover {
+    background: #fff;
+    color: #222;
+}
+
+.light-nav__btn {
+    border: 1px solid #222;
+    color: #222;
+}
+
+.light-nav__btn:hover {
+    background: #222;
+    color: #fff;
+}

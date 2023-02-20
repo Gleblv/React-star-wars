@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
+import UINavButton from '../../UI/UINavButtons/UINavButton';
+
 import './PeopleNavigation.css';
 
 const PeopleNavigation = ({getResourse, prevPage, nextPage, counterPage}) => {
@@ -8,13 +10,25 @@ const PeopleNavigation = ({getResourse, prevPage, nextPage, counterPage}) => {
 
     const onClickPrev = () => getResourse(prevPage);
 
+    const darkBtnTheme = 'dark-nav__btn',
+          lightBtnTheme = 'light-nav__btn';
+
     return (
         <div className='navigation-buttons'>
             <Link className='nav-link' to={`/people/?page=${counterPage - 1}`}>
-                <button onClick={onClickPrev} disabled={!prevPage} className="prev-nav__btn">Previous</button>
+                <UINavButton 
+                    text={'Previous'}
+                    onClick={onClickPrev} 
+                    disabled={!prevPage}  
+                    theme={darkBtnTheme}
+                />
             </Link>
             <Link className='nav-link' to={`/people/?page=${counterPage + 1}`}>
-                <button onClick={onClickNext} disabled={!nextPage} className="next-nav__btn">Next</button>
+                <UINavButton 
+                    text={'Next'}
+                    onClick={onClickNext} 
+                    disabled={!nextPage}  
+                />
             </Link>
         </div>
     )
